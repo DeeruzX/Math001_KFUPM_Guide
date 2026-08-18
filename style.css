@@ -1,113 +1,502 @@
-/* ===== Body ===== */
-body {
+/* =========================
+   RESET
+   ========================= */
+
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #13171c 0%, #1b2028 100%);
-    color: #f5e05a;
+    box-sizing: border-box;
 }
+
+
+/* =========================
+   BODY
+   ========================= */
+
+body {
+
+    min-height: 100vh;
+
+    margin: 0;
+
+    padding: 0;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #13171c 0%,
+            #1b2028 100%
+        );
+
+    color: #f5e05a;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* =========================
+   MAIN
+   ========================= */
 
 #main {
+
     text-align: center;
+
     padding: 2rem 1rem;
+
 }
 
-/* ===== Headings ===== */
-h1 {
-    font-size: clamp(32px, 6vw, 70px);
-    margin: 1rem 0;
+
+/* =========================
+   THEME SWITCH
+   ========================= */
+
+.theme-switch {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
 }
+
+
+.theme-switch button {
+
+    width: 45px;
+
+    height: 40px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #1a1f27;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+}
+
+
+.theme-switch button:hover {
+
+    transform: scale(1.08);
+
+}
+
+
+/* =========================
+   HEADINGS
+   ========================= */
+
+h1 {
+
+    font-size:
+        clamp(32px, 6vw, 70px);
+
+    margin: 1rem 0;
+
+}
+
 
 h2 {
-    font-size: clamp(22px, 4vw, 40px);
-    margin: 3rem 0 1.5rem 0;
+
+    font-size:
+        clamp(22px, 4vw, 40px);
+
+    margin:
+        3rem 0 1.5rem 0;
+
 }
 
-/* ===== GRID LAYOUT ===== */
-/* Mobile First (1 column) */
+
+h3 {
+
+    margin-top: 2rem;
+
+}
+
+
+h6 {
+
+    font-size: 0.8rem;
+
+    opacity: 0.7;
+
+}
+
+
+/* =========================
+   GRID
+   ========================= */
+
 .link-row {
+
     display: grid;
+
     grid-template-columns: 1fr;
+
     gap: 2rem;
+
     max-width: 1000px;
-    margin: 0 auto 3rem auto;
-    padding: 0 1rem;
+
+    margin:
+        0 auto 3rem auto;
+
+    padding:
+        0 1rem;
+
 }
 
-/* Laptop and above (2 columns) */
+
 @media (min-width: 768px) {
+
     .link-row {
-        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
     }
+
 }
 
-/* ===== CARDS ===== */
+
+/* =========================
+   CARDS
+   ========================= */
+
 .link-card {
+
     background-color: #1a1f27;
+
     border-radius: 15px;
+
     padding: 2rem;
 
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     justify-content: center;
+
     gap: 1.2rem;
 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+
 }
+
 
 .link-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 15px 30px
+        rgba(0, 0, 0, 0.5);
+
 }
 
-/* ===== Title Inside Card ===== */
+
+/* =========================
+   CARD TEXT
+   ========================= */
+
 .link-label {
+
     font-size: 20px;
+
     font-weight: bold;
+
     margin: 0;
+
 }
 
-/* ===== Button Style ===== */
+
+/* =========================
+   LINKS
+   ========================= */
+
 .link-card a {
+
     background-color: #f5e05a;
+
     color: #13171c;
-    padding: 0.7em 1.5em;
+
+    padding:
+        0.7em 1.5em;
+
     border-radius: 8px;
+
     text-decoration: none;
+
     font-weight: bold;
-    transition: 0.3s ease;
+
+    transition:
+        0.3s ease;
+
 }
+
 
 .link-card a:hover {
+
     background-color: #fff176;
-    transform: scale(1.07);
+
+    transform:
+        scale(1.07);
+
 }
 
-/* ===== Logos ===== */
-.kfupm_logo {
-    width: 180px;
-    max-width: 90%;
-    margin: 2rem auto;
-    display: block;
+
+/* =========================
+   TELEGRAM
+   ========================= */
+
+.telegram-card {
+
+    max-width: 300px;
+
+    margin: 0 auto;
+
 }
+
+
+/* =========================
+   KFUPM LOGO
+   ========================= */
+
+.kfupm_logo {
+
+    width: 180px;
+
+    max-width: 90%;
+
+    margin:
+        2rem auto;
+
+    display: block;
+
+}
+
+
+/* =========================
+   DEVELOPER
+   ========================= */
+
+.developer {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
 
 .logo {
+
     width: 180px;
+
     max-width: 90%;
+
     border-radius: 12px;
-    margin: 2rem auto;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+    margin:
+        2rem auto;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
 }
+
 
 .logo:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(255, 240, 100, 0.4);
+
+    transform:
+        scale(1.1);
+
+    box-shadow:
+        0 0 20px
+        rgba(255, 240, 100, 0.4);
+
 }
 
-/* ===== Footer ===== */
+
+/* =========================
+   COPYRIGHT
+   ========================= */
+
 #copyright {
+
     font-size: 14px;
+
     color: #888;
-    margin-top: 3rem;
+
+    margin-top: 1rem;
+
+}
+
+
+/* =================================================
+   PURPLE MODE
+   ================================================= */
+
+body.purple-mode {
+
+    background: #101010;
+
+    color: #b58cff;
+
+}
+
+
+/* Headings */
+
+body.purple-mode h1,
+body.purple-mode h2,
+body.purple-mode h3,
+body.purple-mode h6 {
+
+    color: #b58cff;
+
+}
+
+
+/* Cards */
+
+body.purple-mode .link-card {
+
+    background: #101010;
+
+    border:
+        2px solid #b58cff;
+
+    box-shadow: none;
+
+}
+
+
+/* Card hover */
+
+body.purple-mode .link-card:hover {
+
+    box-shadow:
+        0 0 20px
+        rgba(181, 140, 255, 0.25);
+
+}
+
+
+/* Links */
+
+body.purple-mode .link-card a {
+
+    background: #b58cff;
+
+    color: #101010;
+
+}
+
+
+body.purple-mode .link-card a:hover {
+
+    background: #c7a9ff;
+
+}
+
+
+/* Theme buttons */
+
+body.purple-mode
+.theme-switch button {
+
+    background: #101010;
+
+    border:
+        2px solid #b58cff;
+
+}
+
+
+/* Developer */
+
+body.purple-mode .logo:hover {
+
+    box-shadow:
+        0 0 20px
+        rgba(181, 140, 255, 0.4);
+
+}
+
+
+/* Copyright */
+
+body.purple-mode #copyright {
+
+    color: #777;
+
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    #main {
+
+        padding:
+            1.5rem 0.5rem;
+
+    }
+
+    .link-row {
+
+        gap: 1.2rem;
+
+    }
+
+    .link-card {
+
+        padding: 1.5rem;
+
+    }
+
+    .kfupm_logo {
+
+        width: 150px;
+
+    }
+
+    .logo {
+
+        width: 150px;
+
+    }
+
 }
